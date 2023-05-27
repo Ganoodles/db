@@ -33,7 +33,6 @@ class BotHandler(commands.Bot):
         self.logger = Logger()
 
         super().__init__(
-            command_prefix=commands.when_mentioned_or(self.prefix),
             intents=intents,
             reconnect=True,
             activity=self.default_activity
