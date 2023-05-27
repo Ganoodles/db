@@ -45,10 +45,9 @@ class BotHandler(commands.Bot):
         """Sets the default activity."""
         return discord.Activity(
             type=discord.ActivityType.watching,
-            name=f"{self.prefix}help"
+            name="you"
         )
-        
-        
+
     async def bot_startup(self):
         """Blocking method that facilitates loading of all the bot's cogs along with any other preliminary setup."""
         self.logger.debug("Loading cogs...")
