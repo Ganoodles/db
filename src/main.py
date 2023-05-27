@@ -61,7 +61,7 @@ class BotHandler(commands.Bot):
                 if cog_name in self.disabled_cogs:
                     self.logger.debug(f"DISABLED - {cog_name}")
                     continue
-                self.load_extension(f"src.cogs.{cog_name}")
+                await self.load_extension(f"src.cogs.{cog_name}")
                 self.logger.debug(f"LOADED - {cog_name}")
             except Exception as e:
                 self.logger.error(f"Failed to load cog {cog_name}: {e}")
